@@ -1,0 +1,292 @@
+/* CSS Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Body values  */
+body{
+    background-color: black; 
+    color: white;
+}
+
+
+/*  NAVBAR  */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    z-index: 1;
+}
+#logo{
+    margin: 1.3rem 1.9rem;
+}
+#logo img{
+    height: 2.5rem;
+}
+#navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+#navbar ul li a{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 3px 26px;
+    text-decoration: none;
+    transition: all 200ms ease 0s;
+}
+#navbar ul li a:hover{
+    color: rgb(255, 214, 153);
+    text-decoration: underline;
+}
+
+
+/* HOME  */
+#home-section::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  
+    /* Specify the background image to be used */
+    background-image: url('../img/top.webp');
+    background-size:cover;
+}
+#home-section{
+    min-height: 52vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    position: relative;
+}
+#home-container{
+    /* flex-basis: 700px; */
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    flex-basis: 55%;
+}
+#home-text{
+    height: 6.1rem;
+}
+.h-btn{
+    font-size: 1rem;
+    padding: 5px 9px;
+    font-weight: 540 ;
+    border: none;
+    margin: 15px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 150ms ease-in-out 0s;
+}
+.h-btn:hover{
+    background-color: rgb(236, 190, 190);
+}
+
+
+/* PUMA Text  */
+.puma{
+    margin: 3.5rem 0rem 0rem 1.2rem;
+    font-weight: bolder;
+}
+
+
+/* CARDS */
+#card-container{
+    display: flex;
+    justify-content: space-between;
+    height: 518px;
+    margin: 0.6rem 1.2rem;
+    position: relative;
+}    
+.card{
+    height:inherit;
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor:pointer;
+}
+#card-1{
+    background: url(../img/Mens.webp)no-repeat ;
+    background-size: 510px 518px;
+    background-position-x: center;
+}     
+
+#card-2{
+    background: url(../img/Womens.webp)no-repeat ;
+    background-size: 510px 518px;
+    background-position-x: center;
+}    
+#card-3{
+    background: url(../img/Kids.webp)no-repeat ;
+    background-size: 510px 518px;
+    background-position-x: center;
+}    
+/* Personal note: arrange the btn using position absolute, tried using sticky but its not feasible. bcoz its left/ bottom was related to container */
+.card-btn{
+    position: absolute;
+    font-size: 1.23em;
+    left: 20px;
+    bottom: 35px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor:pointer;
+    transition: all 150ms ease-in-out 0s;
+}    
+.card-btn:hover{
+    background: transparent;
+    color: black;
+}
+
+
+/* TEAMS */
+#teams-section{
+    height: 60vh;
+    position: relative;
+    margin: 4rem 0rem;
+    position: relative;
+}
+#teams-section::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  
+    /* Specify the background image to be used */
+    background-image: url('../img/field.jpg');
+    background-size: cover;
+    background-position-y:35%;
+  
+    /* Specify the background image */
+    opacity: 0.4;
+}
+#teams-container{
+    position: relative;
+    height:inherit;
+    display: flex;
+    justify-content: center;
+}
+.teams-text{
+    /* border: 1px solid red; */
+    height: 100%;
+    flex-basis: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teams-text p {
+    font-size:5rem;
+}
+.teams-logo{
+    /* border: 1px solid red; */
+    display: flex;
+    height: 100%;
+    flex-basis: 50vw;
+    flex-flow:column wrap;
+}
+.teams-logo img{
+    height: 8rem;
+    width: 7rem;
+    align-self: center;
+    padding: 0.5em 0em;
+    margin-bottom: 1.3rem;
+}
+.teams-logo img:nth-child(2n+0){
+    height: 10rem;
+}
+.teams-logo img:nth-child(5){
+    width: 8rem;
+}
+
+
+/* FORM  */
+#form-section::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('../img/Feedback2.jpeg');
+    background-size: cover;
+    background-position-y:30%;
+    opacity: 0.4;
+    /* this is must  */
+    z-index: -1;
+}
+#form-section{
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+#form-container{
+    flex-basis: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-container div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px;
+}
+
+#form-container div input{
+    cursor: pointer;
+    height: 40px;
+    width: 68%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.form-btn{
+    font-size: 1rem;
+    transition: all 200ms ease-in-out 0s;
+}
+.form-btn:hover{
+    opacity: 0.8;
+}
+
+
+/* Utility classes */
+.h-primary{
+    font-size:3rem;
+    font-family: 'Hind', sans-serif;
+}
+/* .h-secondary{
+    font-size:3rem;
+    font-family: 'Hind', sans-serif;
+} */
+.t-primary{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+}
+.center{
+    text-align: center;
+}
+.footer{
+    font-family: 'Nunito', sans-serif;
+}
